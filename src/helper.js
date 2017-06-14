@@ -31,17 +31,6 @@ export const getAMapPixel = (ofst) => {
   return hasWindow ? new window.AMap.Pixel(ofst[0], ofst[1]) : null;
 };
 
-export const getAMapSize = (size) => {
-  if (!size) {
-    return size;
-  }
-  if ('getWidth' in size) {
-    return size;
-  }
-  return hasWindow ? new window.AMap.Size(size.width, size.height) : null;
-};
-
-
 export const MarkerConfigurableProps = [
   'position',
   'offset',
